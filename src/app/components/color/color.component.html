@@ -1,5 +1,7 @@
 <ul *ngIf="dataLoaded == true" class="list-group">
-    <li class="list-group-item active" aria-current="true">Renkler</li>
+  <li style="color: white;" class="list-group-item bg-info " >
+    Renkler
+  </li>
     <li *ngFor="let color of colors" class="list-group-item">{{color.colorName}}</li>
  
   </ul>
