@@ -1,12 +1,20 @@
 <div *ngIf="dataLoaded==false"class="spinner-border text-primary" role="status">
-    <span class="visually-hidden"></span>
+  <span class="visually-hidden"></span>
 </div>
+
 <ul *ngIf="dataLoaded == true" class="list-group">
-  <li style="color: white;" class="list-group-item bg-info " aria-current="true">
+  <li 
+  routerLink="/cars"
+  [ngClass]="getAllBrandClass()" 
+  (click)="removeCurrentBrand()"
+  style= " margin-top: 5px;" aria-current="true">
     Markalar
   </li>
-  <li *ngFor="let brand of brands" class="list-group-item">
-    {{brand.brandName}}
+  <li (click)="setCurrentBrand(brand)" *ngFor="let brand of brands" 
+  routerLink="/cars/brand/{{brand.brandId}}"
+  [class]="getCurrentBrandClass(brand)" >{{brand.brandName}}
   </li>
 
 </ul>
+
+<h5 *ngIf="currentBrand">{{currentBrand.brandName}} seçtiniz </h5>

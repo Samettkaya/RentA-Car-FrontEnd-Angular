@@ -1,7 +1,18 @@
-<ul *ngIf="dataLoaded == true" class="list-group">
-  <li style="color: white;" class="list-group-item bg-info " >
-    Renkler
-  </li>
-    <li *ngFor="let color of colors" class="list-group-item">{{color.colorName}}</li>
- 
+ <ul *ngIf="dataLoaded == true" class="list-group">
+    <li 
+    routerLink="/cars"
+    [ngClass]="getAllColorClass()" 
+    (click)="removeCurrentColor()"
+    style= " margin-top: 5px;" aria-current="true">
+      Renkler
+    </li>
+    <li (click)="setCurrentColor(color)" *ngFor="let color of colors" 
+    routerLink="/cars/color/{{color.colorId}}"
+    [class]="getCurrentColorClass(color)" >{{color.colorName}}
+    </li>
+  
   </ul>
+  <h5>{{currentColor.colorName}} seçtiniz </h5>
+
+ 
+  

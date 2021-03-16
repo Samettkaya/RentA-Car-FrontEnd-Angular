@@ -1,5 +1,6 @@
 export interface Rental{
     rentalId:Number,
+    carName:String,
     rentDate:Date,
     returnDate:Date,
     companyName:String,
@@ -7,7 +8,8 @@ export interface Rental{
     lastName:String,
     brandName:String,
     colorName:String,
-    carDescription:String,
+    carDesctiption:String,
     modelYear:String,
-    dailyPrice:Number
+    dailyPrice:Number,
+    userName:string
 }

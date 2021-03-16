@@ -1,28 +1,20 @@
-<h3 class="text-center">Araba Listesi</h3>
-
 <div *ngIf="dataLoaded==false"class="spinner-border text-primary text-center" role="status">
     <span class="visually-hidden"></span>
 </div>
 
-<table *ngIf="dataLoaded == true" class="table">
-    <thead>
-        <tr>
-            <th>Araç No</th>
-            <th>Renk</th>
-            <th>Marka</th>
-            <th>Model</th>
-            <th>Günlük Ücret</th>
-            <th>Açıklama</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let car of cars">
-            <td>{{car.carId}}</td>
-            <td>{{car.colorName}}</td>
-            <td>{{car.brandName}}</td>
-            <td>{{car.modelYear}}</td>
-            <td>{{car.dailyPrice}}</td>
-            <td>{{car.description}}</td>
-        </tr>
-    </tbody>
-</table>
+    <div *ngFor="let car of cars" class="card m-2 mt-5" style="width: 15rem; float: left;">
+      <img src=" {{car.imagePath}}" class="card-img-top" alt="">
+      <div class="card-body">
+        <h5 class="card-title text-center">{{car.carName}}</h5>
+        <p class="card-text text-center">{{car.description}}</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item ">{{car.brandName}}</li>
+        <li class="list-group-item ">{{car.colorName}}</li>
+        <li class="list-group-item ">{{car.dailyPrice}} TRY</li>
+      </ul>
+      <div class="card-body">
+        
+        <button type="button" routerLink = "/cardetails/{{car.carId}}" class="btn btn-outline-primary text-center">Ayrıntılar</button>
+      </div>
+    </div>
