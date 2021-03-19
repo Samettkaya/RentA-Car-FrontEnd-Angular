@@ -8,8 +8,9 @@
       style= " margin-top: 5px;" >
         Tüm Markalar
     </li>
-    <li (click)="setCurrentBrand(brand)" *ngFor="let brand of brands" 
+    <li (click)="setCurrentBrand(brand)" 
         routerLink="/cars/brand/{{brand.brandId}}"
+        *ngFor="let brand of brands" 
         [class]="getCurrentBrandClass(brand)" >
         {{brand.brandName}}
     </li>

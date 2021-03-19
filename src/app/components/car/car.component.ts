@@ -29,6 +29,7 @@ imageUrl="https://localhost:44388";
       }
       else if(params["brandId"]){
         this.getCarsByBrand(params["brandId"])
+        
       }
       else{
         this.getCars()
@@ -43,11 +44,14 @@ imageUrl="https://localhost:44388";
       this.dataLoaded=true;
     })
   }
-  
+ 
   getCarsByBrand(brandId:number){
+    console.log(brandId)
     this.carService.getCarsByBrand(brandId).subscribe(response=>{
       this.cars=response.data;
       this.dataLoaded=true;
+      console.log(response)
+      
     })
   }
 
@@ -56,7 +60,7 @@ imageUrl="https://localhost:44388";
     this.carService.getCarsByColor(colorId).subscribe(response=>{
       this.cars=response.data;
       this.dataLoaded=true;
-      console.log(this.cars)
+     
     })
   }
 
