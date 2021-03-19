@@ -1,15 +1,25 @@
+<div *ngIf="dataLoaded==false"class="spinner-border text-primary" role="status">
+  <span class="visually-hidden"></span>
+</div>
+
+<div class="mb-3" >
+  <label for="colorFilter" class="form-label"></label>
+  <input type="text" [(ngModel)]="colorFilter" class="form-control" id="colorFilter" 
+  placeholder="arama ifadesi giriniz">
+</div>
+
  <ul *ngIf="dataLoaded == true" class="list-group">
     <li 
-    routerLink="/cars" [ngClass]="getAllColorClass() "style= " margin-top: 5px;" aria-current="true">
+    routerLink="/cars" [ngClass]="getAllColorClass()" style= " margin-top: 5px;" aria-current="true">
       Tüm Renkler
     </li>
-    <li (click)="setCurrentColor(color)" *ngFor="let color of colors" 
+    <li (click)="setCurrentColor(color)" *ngFor="let color of colors  |colorFilter:colorFilter" 
     routerLink="/cars/color/{{color.colorId}}"
     [class]="getCurrentColorClass(color)" >{{color.colorName}}
     </li>
   
   </ul>
-  <h5 *ngIf="currentColor">{{currentColor.colorName}} seçtiniz </h5>
 
- 
+
+
   

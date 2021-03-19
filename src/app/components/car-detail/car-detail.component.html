@@ -1,4 +1,4 @@
-  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div id="carouselExampleIndicators" class="carousel slide mt-5" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button *ngFor="let image of carImages;let i = index" type="button" data-bs-target="#carouselExampleIndicators" attr.data-bs-slide-to="{{i}}" [class]="getButtonClass(image)" aria-current="true" aria-label="Slide 1"></button>
       <!-- <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" [class]="getButtonClass(image)" aria-current="true" aria-label="Slide 1"></button>
@@ -15,19 +15,19 @@
       <span class="visually-hidden">Previous</span>
     </button>
     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="carousel-control-next-icon"  aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
-  </div>
-<table *ngIf="dataLoaded==true" class="table table-striped table-hover table-bordered">
-    <thead>
+  </div> 
+<table *ngIf="dataLoaded==true" class="table mt-5">
+    <thead class="table-dark">
         <tr>
-            <th>Brand</th>
-            <th>Color</th>
-            <th>Model Year</th>
-            <th>Daily Price</th>
-            <th>Description</th>
-            <th>Function</th>
+            <th>Marka</th>
+            <th>Renk</th>
+            <th>Model</th>
+            <th>Günlük Fiyat</th>
+            <th>Açıklama</th>
+        
 
         </tr>
     </thead>
@@ -38,7 +38,10 @@
             <td>{{car.modelYear}}</td>
             <td>{{car.dailyPrice}}</td>
             <td>{{car.description}}</td>
-             <button type="button" class="btn btn-outline-dark">Kirala</button>
+            <button type="button" class="btn btn-outline-dark ms-5">Kirala</button>
     
         </tr>
     </tbody>
+
+</table>
+
