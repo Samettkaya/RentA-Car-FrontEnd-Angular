@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Brand } from 'src/app/models/brand';
 import { BrandService } from 'src/app/services/brand.service';
 
@@ -10,10 +11,12 @@ import { BrandService } from 'src/app/services/brand.service';
 export class BrandComponent implements OnInit {
 
   brands:Brand[]=[];
-  currentBrand:Brand={brandId:0,brandName:""};
+  currentBrand: Brand;
   dataLoaded=false;
 
-  constructor(private brandService:BrandService,) { }
+  constructor(
+    private  brandService:BrandService,
+    ) { }
 
   ngOnInit(): void {
     this.getBrands();
@@ -28,9 +31,7 @@ export class BrandComponent implements OnInit {
 
   setCurrentBrand(brand:Brand){
     this.currentBrand=brand;
-  }
-  removeCurrentBrand(){
-    this.currentBrand = {brandId:0,brandName:""};
+
   }
 
   getCurrentBrandClass(brand:Brand){
@@ -44,11 +45,11 @@ export class BrandComponent implements OnInit {
   }
   
   getAllBrandClass(){
-    let defaultBrand:Brand ={brandId:0,brandName:""};
-    if(this.currentBrand.brandId == defaultBrand.brandId){ 
+    if(!this.currentBrand){
       return "list-group-item active cursorPointer";
-    } else {
+    }else{
       return "list-group-item cursorPointer";
     }
   }
+  
 }

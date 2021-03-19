@@ -1,20 +1,29 @@
-<div *ngIf="dataLoaded==false"class="spinner-border text-primary text-center" role="status">
+
+<div *ngIf="dataLoaded==false" class="spinner-border text-primary" role="status">
     <span class="visually-hidden"></span>
 </div>
 
-    <div *ngFor="let car of cars" class="card m-2 mt-5" style="width: 15rem; float: left;">
-      <img src=" {{car.imagePath}}" class="card-img-top" alt="">
-      <div class="card-body">
-        <h5 class="card-title text-center">{{car.carName}}</h5>
-        <p class="card-text text-center">{{car.description}}</p>
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item ">{{car.brandName}}</li>
-        <li class="list-group-item ">{{car.colorName}}</li>
-        <li class="list-group-item ">{{car.dailyPrice}} TRY</li>
-      </ul>
-      <div class="card-body">
+<div class="row" *ngIf="dataLoaded==true">
+    <div *ngFor="let car of cars" class="card m-2" style="width: 267px; ">
+        <img  src="{{imageUrl}}{{car.imagePath}}" alt="{{imageUrl}}{{car.imagePath}}" class="card-img-top" width="320" height="200" >
         
-        <button type="button" routerLink = "/cardetails/{{car.carId}}" class="btn btn-outline-primary text-center">Ayrıntılar</button>
+        <div class="card-body">
+          <h5 class="card-title d-flex justify-content-center">{{car.carName}}</h5>
+          <p class="card-text d-flex justify-content-center">{{car.description}}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Marka: {{car.brandName}}</li>
+          <li class="list-group-item">Renk: {{car.colorName}}</li>
+          <li class="list-group-item">Model: {{car.modelYear}}</li>
+          <li class="list-group-item">Fiyat: {{car.dailyPrice}}</li>
+        </ul>
+        <div class="card-body">
+            <section style="float:left">
+              <button routerLink="/car/details/{{car.carId}}" type="button" class="btn btn-outline-dark">Detay</button>
+            </section>
+            <section style="float: right">
+              <button type="button" class="btn btn-outline-dark">Kirala</button>
+            </section>
+        </div>
       </div>
-    </div>
+</div>

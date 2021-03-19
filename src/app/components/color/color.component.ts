@@ -10,7 +10,7 @@ import { ColorService } from 'src/app/services/color.service';
 export class ColorComponent implements OnInit {
   colors:Color[] = [];
   dataLoaded = false;
-  currentColor:Color={colorId:0,colorName:""};
+  currentColor:Color;
   constructor(private colorService:ColorService) { }
 
   ngOnInit(): void {
@@ -18,28 +18,28 @@ export class ColorComponent implements OnInit {
   }
   getColors() {
     this.colorService.getColors().subscribe(response => {
-       this.colors = response.data,
-       this.dataLoaded = true;
+      this.colors = response.data,
+      this.dataLoaded = true;
     })
   }
-  removeCurrentColor(){
-    this.currentColor={colorId:0,colorName:""};
-  }
+
   setCurrentColor(color:Color){
     this.currentColor=color;
   }
   getCurrentColorClass(color:Color){
     if(color==this.currentColor ){
       return "list-group-item active cursorPointer";
-    } else {
+    } 
+    else {
       return "list-group-item cursorPointer"
     }
   }
   getAllColorClass(){
-    let defaultColor:Color = {colorId:0,colorName:""};
-    if(this.currentColor.colorId == defaultColor.colorId){
+
+    if(!this.currentColor){
       return "list-group-item active cursorPointer";
-    } else {
+    } 
+    else{
       return "list-group-item cursorPointer"
     }
   }

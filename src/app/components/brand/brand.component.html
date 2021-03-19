@@ -3,17 +3,16 @@
 </div>
 
 <ul *ngIf="dataLoaded == true" class="list-group">
-  <li 
-  routerLink="/cars"
-  [ngClass]="getAllBrandClass()" 
-  (click)="removeCurrentBrand()"
-  style= " margin-top: 5px;" aria-current="true">
-    Markalar
-  </li>
-  <li (click)="setCurrentBrand(brand)" *ngFor="let brand of brands" 
-  routerLink="/cars/brand/{{brand.brandId}}"
-  [class]="getCurrentBrandClass(brand)" >{{brand.brandName}}
-  </li>
+    <li 
+      routerLink="/cars" [ngClass]="getAllBrandClass()"
+      style= " margin-top: 5px;" >
+        Tüm Markalar
+    </li>
+    <li (click)="setCurrentBrand(brand)" *ngFor="let brand of brands" 
+        routerLink="/cars/brand/{{brand.brandId}}"
+        [class]="getCurrentBrandClass(brand)" >
+        {{brand.brandName}}
+    </li>
 
 </ul>
 
