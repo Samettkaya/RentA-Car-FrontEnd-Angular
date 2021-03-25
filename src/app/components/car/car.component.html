@@ -5,11 +5,13 @@
 
 
 <div class="mb-3" >
+  
   <label for="carFilter" class="form-label"></label>
   <input type="text" [(ngModel)]="carFilter" class="form-control" id="carFilter" 
   placeholder="arama ifadesi giriniz">
 </div>
 
+<app-car-filter></app-car-filter>
 <div class="row" *ngIf="dataLoaded==true">
     <div *ngFor="let car of cars |carFilter:carFilter" class="card m-2 " style="width: 267px; ">
         <img  src="{{imageUrl}}{{car.imagePath}}" alt="{{imageUrl}}{{car.imagePath}}" class="card-img-top" width="320" height="200" >
@@ -29,7 +31,7 @@
               <button routerLink="/car/details/{{car.carId }}" type="button" class="btn btn-outline-dark">Detay</button>
             </section>
             <section style="float: right">
-              <button type="button" class="btn btn-outline-dark">Kirala</button>
+              <button routerLink="/car/rental/{{car.carId}}" type="button" class="btn btn-outline-dark">Kirala</button>
             </section>
         </div>
       </div>

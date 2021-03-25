@@ -8,7 +8,7 @@
   placeholder="arama ifadesi giriniz">
 </div>
 
-<ul *ngIf="dataLoaded == true" class="list-group">
+<ul *ngIf="dataLoaded == true" class="list-group ">
     <li 
       routerLink="/cars" [ngClass]="getAllBrandClass()"
      >
@@ -23,7 +23,3 @@
 
 </ul>
 
-<!-- <select class="form-select" [(ngModel)]="currentBrand" #brandSelection (change)="setQueryParams(currentBrand)" aria-label="Default select example">
-  <option [selected]="isAllBrandSelected()" [ngValue]=undefined>Tüm markalar</option>
-  <option [selected]="isCurrentBrand(brand)" *ngFor="let brand of brands | brandFilter:filterBrandText; index as i" [ngValue]="brand">{{brand.name}}</option>
-</select> -->

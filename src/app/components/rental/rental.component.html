@@ -1,24 +1,52 @@
-<h3 class="text-center">Kiralanan Araçlar Listesi</h3>
-<div *ngIf="dataLoaded==false"class="spinner-border text-primary" role="status">
-    <span class="visually-hidden"></span>
-</div>
-<table class="table" *ngIf="dataLoaded == true">
-    <thead>
-        <tr>
-            <th>Marka</th>
-            <th>Renk</th>
-            <th>Müşteri</th>
-            <th>Kiralama Tarihi</th>
-            <th>Teslim Alma Tarihi</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let rental of rentals">
-            <td>{{rental.brandName}}</td>
-            <td>{{rental.colorName}}</td>
-            <td>{{rental.firstName +" "+ rental.lastName}}</td>
-            <td>{{rental.rentDate | date:'dd-MM-YYYY'}}</td>
-            <td>{{(rental.returnDate == null)? "Teslim Alınmadı": rental.returnDate | date:'dd-MM-YYYY'}}</td>
-        </tr>
-    </tbody>
-    </table>
+<div class="card mb-3" style="max-width: 1024px; margin-top: 20px;">
+    <div class="row g-0">
+      <div class="col-md-5">
+        <table *ngIf="car" class="table table-striped mt-2">
+            <tbody>
+              <tr>
+                <th scope="row">Marka</th>
+                <td>{{ car.brandName }}</td>
+              </tr>
+              <tr>
+                <th scope="row">Model</th>
+                <td>{{ car.carName }}</td>
+              </tr>
+              <tr>
+                <th scope="row">Renk</th>
+                <td>{{ car.colorName }}</td>
+              </tr>
+              <tr>
+                <th scope="row">Günlük Fiyat</th>
+                <td>
+                  {{
+                    car.dailyPrice | currency: "TRY":"symbol-narrow":"1.2-2"
+                  }}
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Model Yılı</th>
+                <td>{{car.modelYear}}</td>
+              </tr>
+              <tr>
+                <th scope="row">Açıklama</th>
+                <td>{{ car.description }}</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      <div class="col-md-7" style="position: relative;">
+        <div class="card-body">
+            <form class="list-group-item active">
+                <label>Başlangıç tarihi</label><label style="margin-left: 95px;">Bitiş tarihi</label>
+                <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                    <div class="btn-group me-5" role="group" aria-label="First group"><input type="date" (change)="calculatePrice()" [(ngModel)]="startDate" [ngModelOptions]="{standalone: true}"></div>
+                    <div class="btn-group me-5" role="group" aria-label="First group"><input type="date" (change)="calculatePrice()" [(ngModel)]="endDate" [ngModelOptions]="{standalone: true}"></div>
+                </div>
+                <br><br>
+                <div><p *ngIf="endDate && startDate">Toplam ücret: {{rentPrice | currency:"TRY":"symbol-narrow":"1.2-2"}}</p></div>
+            </form>
+        </div>
+          <button (click)="addRental(rental)" type="button" class="btn btn-success" style="position:absolute; bottom:20px; right:20px;">Kirala</button>
+      </div>
+    </div>
+  </div>

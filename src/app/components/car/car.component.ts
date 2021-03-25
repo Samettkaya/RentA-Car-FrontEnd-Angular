@@ -47,11 +47,11 @@ carFilter="";
   }
  
   getCarsByBrand(brandId:number){
-    console.log(brandId)
+ 
     this.carService.getCarsByBrand(brandId).subscribe(response=>{
       this.cars=response.data;
       this.dataLoaded=true;
-      console.log(response)
+     
       
     })
   }
