@@ -22,7 +22,7 @@ import { CarFilterComponent } from './components/car-filter/car-filter.component
 
 import { ToastrModule } from 'ngx-toastr';
 import { CreditCardComponent } from './components/creditcard/creditcard.component';
-import { CarAddComponent } from './components/car-add/car-add.component';
+import { CarAddComponent } from './components/car/car-add/car-add.component';
 
 @NgModule({
   declarations: [
