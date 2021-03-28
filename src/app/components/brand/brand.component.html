@@ -15,8 +15,10 @@
         Tüm Markalar
     </li>
     <li (click)="setCurrentBrand(brand)" 
+    
         routerLink="/cars/brand/{{brand.brandId}}"
         *ngFor="let brand of brands |brandFilter:brandFilter" 
+        
         [class]="getCurrentBrandClass(brand)" >
         {{brand.brandName}}
     </li>

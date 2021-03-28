@@ -10,8 +10,10 @@
 
  <ul *ngIf="dataLoaded == true" class="list-group">
     <li 
-    routerLink="/cars" [ngClass]="getAllColorClass()" style= " margin-top: 5px;" aria-current="true">
-      Tüm Renkler
+    routerLink="/cars" [ngClass]="getAllColorClass()" style= " margin-top: 5px;" aria-current="true"
+    >
+     
+    Tüm Renkler
     </li>
     <li (click)="setCurrentColor(color)" *ngFor="let color of colors  |colorFilter:colorFilter" 
     routerLink="/cars/color/{{color.colorId}}"

@@ -1,0 +1,71 @@
+/*******************************************************
+global stiles for the page DO NOT USE IN YOUR COMPONENT!!
+*********************************************************/
+/*
+  variables css to not repeat code, this goes in the main css
+  size values
+  colors values
+*/
+:root {
+    --extra-small: 4px;
+    --small: 8px;
+    --medium: 16px;
+    --big: 24px;
+    --extra-big: 36px;
+    --ultra-big: 44px;
+    --primary-color: #4c50af;
+    --secundary-color: #76b852;
+    --accent-color: yellow;
+    --base-light: white;
+    --base-grey: #f2f2f2;
+    --base-dark: #1a1a1a;
+    --mutted-color: #b3b3b3;
+    --links-color: #4caf50;
+    --default-font: "Roboto", sans-serif;
+  }
+  
+  /*
+    styles for the body a font and a color
+  */
+  body {
+    background: var(--secundary-color, #76b852);
+    font-family: var(--default-font, sans-serif);
+  }
+  
+  /*
+  class for a whole wrapeer, max size, some margins paddings and font sizes
+  */
+  .page {
+    width: 1200px;
+    margin: auto;
+    padding: 2% 0 0;
+    font-size: var(--medium, 16px);
+  }
+  
+  /*
+  wrapper for a flexbox simple grid
+  */
+  main {
+    display: flex;
+    margin-bottom: 20px;
+    max-width: 1200px;
+    margin: auto;
+    align-items: center;
+  }
+  
+  /*
+  wrapper for a flexible content that uses remaining spaces
+  */
+  section {
+    flex-grow: 1;
+    margin: 20px;
+  }
+  
+  /*
+  wrapper for 33% size content
+  */
+  aside {
+    flex-basis: 33.3333%;
+    flex-shrink: 0;
+    margin: 20px;
+  }

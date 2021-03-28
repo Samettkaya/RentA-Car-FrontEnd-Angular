@@ -5,6 +5,9 @@ import { CarDetailComponent } from './components/car-detail/car-detail.component
 import { CarComponent } from './components/car/car.component';
 import { CreditCardComponent } from './components/creditcard/creditcard.component';
 import { RentalComponent } from './components/rental/rental.component';
+import { CarEditComponent } from './components/car/car-edit/car-edit.component';
+import { BrandAddComponent } from './components/brand/brand-add/brand-add.component';
+import { ColorAddComponent } from './components/color/color-add/color-add.component';
 
 const routes: Routes = [
   {path:"",pathMatch:"full",component:CarComponent},  
@@ -17,9 +20,10 @@ const routes: Routes = [
   {path:"cars/filter/:brandId/:colorId",component:CarComponent},
   {path:"car/rental/:carId",component:RentalComponent},
   {path:"creditcard/:rental", component:CreditCardComponent},
-  {path:"cars/add",component:CarAddComponent}
-
-  
+  {path:"cars/add",component:CarAddComponent},
+  {path:"cars/edit",component:CarEditComponent},
+  {path:"brands/add",component:BrandAddComponent},
+  {path:"colors/add",component:ColorAddComponent}
 
   
 ];

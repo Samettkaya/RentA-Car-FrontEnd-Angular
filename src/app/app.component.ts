@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ItemModel } from '@syncfusion/ej2-angular-splitbuttons';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'RentACar-FrontEnd';
-  
+  public items: ItemModel[] = [
+    {
+      text: 'Cut'
+  },
+  {
+      text: 'Copy'
+  },
+  {
+      text: 'Paste'
+  }];
 }

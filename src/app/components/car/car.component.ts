@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Car } from 'src/app/models/car';
 import { CarService } from 'src/app/services/car.service';
 
@@ -17,10 +17,12 @@ carFilter="";
     private carService:CarService,
     private activatedRoute:ActivatedRoute,
 
+
     
     ) { }
 
   ngOnInit(): void {
+    
     this.activatedRoute.params.subscribe(params=>{
       if(params["brandId"] && params["colorId"]){
         this.getCarsBySelect(params["brandId"],params["colorId"])

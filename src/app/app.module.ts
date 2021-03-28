@@ -4,6 +4,8 @@ import  {HttpClientModule } from '@angular/common/http';
 import {FormsModule,ReactiveFormsModule} from '@angular/forms'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NaviComponent } from './components/navi/navi.component';
@@ -23,6 +25,13 @@ import { CarFilterComponent } from './components/car-filter/car-filter.component
 import { ToastrModule } from 'ngx-toastr';
 import { CreditCardComponent } from './components/creditcard/creditcard.component';
 import { CarAddComponent } from './components/car/car-add/car-add.component';
+import { CarEditComponent } from './components/car/car-edit/car-edit.component';
+import { BrandAddComponent } from './components/brand/brand-add/brand-add.component';
+import { ColorAddComponent } from './components/color/color-add/color-add.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { LoginComponent } from './components/login/login.component';
+
+
 
 @NgModule({
   declarations: [
@@ -40,15 +49,25 @@ import { CarAddComponent } from './components/car/car-add/car-add.component';
     CarFilterComponent,
     CreditCardComponent,
     CarAddComponent,
+    CarEditComponent,
+    BrandAddComponent,
+    ColorAddComponent,
+    FooterComponent,
+    LoginComponent,
+    
+  
   
   ],
   imports: [
+    
     BrowserModule,
     AppRoutingModule,
+
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    
     NgMultiSelectDropDownModule.forRoot(),
     ToastrModule.forRoot({
       positionClass:"toast-bottom-right"
