@@ -1,0 +1,29 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="wrapper fadeInDown zero-raduis">
+	<div id="formContent">
+		<!-- Tabs Titles -->
+
+		<!-- Icon -->
+		<div class="fadeIn first">
+			<!-- <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" /> -->
+			<h2 class="my-5">Kayıt Oluştur</h2>
+		</div>
+
+		<!-- Login Form -->
+		<form>
+			<input type="text" id="firstName" class="fadeIn second zero-raduis" name="firstName" placeholder="Ad">
+			<input type="text" id="lastName" class="fadeIn second zero-raduis" name="lastName" placeholder="Soyad">
+			<input type="password" id="password" class="fadeIn third zero-raduis" name="register" placeholder="password">
+				<div id="formFooter">
+					<a class="underlineHover" href="#">Parolanızı mı unuttunuz?</a>
+				</div>
+			<input routerLink="/register" type="submit" class="fadeIn fourth zero-raduis" value="Kayıt Ol">
+			<h2>Hesabınız Varmı?</h2>
+			<input routerLink="/login" type="button" class="fadeIn fourth zero-raduis pc" value="Giriş Yap">
+		</form>
+	</div>
+</div>

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light ">
     <div class="container">
         <a class="navbar-brand" href="#">RentA-Car</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -7,34 +7,25 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="#">Ana Sayfa</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
+            <a class="nav-link" href="#">Hakkımızda</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              <a class="nav-link" href="#">Hizmetler</a>
             </li>
+           
         </ul>
         
         <div class="btn-group">
-            <button type="button" class="btn btn-outline-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-              Login
+            <button id="auth" type="button" class="btn btn-outline-success dropdown-toggle auth" data-bs-toggle="dropdown" aria-expanded="false">
+
+              Giriş
             </button>
             <ul class="dropdown-menu dropdown-menu-end  dropdown-menu-lg-start">
-              <li><button class="dropdown-item" type="button">Giriş Yap</button></li>
-              <li><button class="dropdown-item" type="button">Kayıt Ol</button></li>
+              <li><button routerLink="/login" class="dropdown-item" type="button">Giriş Yap</button></li>
+              <li><button routerLink="/register" class="dropdown-item" type="button">Kayıt Ol</button></li>
               <li><button class="dropdown-item" type="button">Çıkış</button></li>
             </ul>
           </div>

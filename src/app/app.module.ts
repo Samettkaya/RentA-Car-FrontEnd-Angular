@@ -27,9 +27,15 @@ import { CreditCardComponent } from './components/creditcard/creditcard.componen
 import { CarAddComponent } from './components/car/car-add/car-add.component';
 import { CarEditComponent } from './components/car/car-edit/car-edit.component';
 import { BrandAddComponent } from './components/brand/brand-add/brand-add.component';
-import { ColorAddComponent } from './components/color/color-add/color-add.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { LoginComponent } from './components/login/login.component';
+import { LoginComponent } from './components/auth/login/login.component';
+import { RegisterComponent } from './components/auth/register/register.component';
+import { AdminDashboardComponent } from './components/pages/admin-dashboard/admin-dashboard.component';
+import { ColorsDashboardComponent } from './components/pages/admin-dashboard/colors-dashboard/colors-dashboard.component';
+import { ColorAddComponent } from './components/pages/admin-dashboard/colors-dashboard/color-add/color-add.component';
+import { ColorEditComponent } from './components/pages/admin-dashboard/colors-dashboard/color-edit/color-edit.component';
+
+
 
 
 
@@ -54,6 +60,11 @@ import { LoginComponent } from './components/login/login.component';
     ColorAddComponent,
     FooterComponent,
     LoginComponent,
+    RegisterComponent,
+    AdminDashboardComponent,
+    ColorsDashboardComponent,
+    ColorEditComponent,
+   
     
   
   

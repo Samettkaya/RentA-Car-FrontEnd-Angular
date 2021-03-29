@@ -1,0 +1,28 @@
+
+<div class="container">
+   
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Renkler</th>
+          <th>
+            <button routerLink="add" type="button" class="btn btn-outline-dark">+ Ekle</button>
+          </th>
+       
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let color of colors">
+          <td>{{color.colorId}}</td>
+          <td>{{color.colorName}}</td>
+          <td>
+            <button type="button" class="btn btn-outline-danger" >Sil</button>
+            <button routerLink="edit/{{color.colorId}}" type="button" class="btn btn-outline-info mx-2">Güncelle</button>
+          </td>
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>
