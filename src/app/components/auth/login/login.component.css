@@ -108,7 +108,7 @@ input[type=text], input[type=email],input[type=password] {
   border: none;
   color: #0d0d0d;
   padding: 10px 25px;
-  text-align: center;
+  text-align: left;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;

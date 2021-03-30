@@ -5,7 +5,8 @@ import { ListResponseModel } from '../models/listResponseModel';
 import { Car } from '../models/car';
 import { ResponseModel } from '../models/responseModel';
 import { SingleResponseModel } from '../models/singleResponseModel';
-import { CarDetail } from '../models/carDetail';
+import { DashboardCars } from '../models/dashboard-cars';
+import { CarStandart } from '../models/carStandart';
 
 
 @Injectable({
@@ -30,7 +31,7 @@ export class CarService {
   addCar(car:Car):Observable<ResponseModel>{
     return this.httpClient.post<ResponseModel>(this.apiUrl + "cars/add", car)
   }
-  updateCar(car:Car):Observable<ResponseModel>{
+  updateCar(car:CarStandart):Observable<ResponseModel>{
     return this.httpClient.post<ResponseModel>(this.apiUrl + "cars/update", car)
   }
   deletCar(car:Car):Observable<ResponseModel>{
@@ -60,6 +61,6 @@ export class CarService {
   getAllCarDetail(){
     let newPath = this.apiUrl + "cars/getallcardetail"
     return this.httpClient
-      .get<ListResponseModel<CarDetail>>(newPath);
+      .get<ListResponseModel<DashboardCars>>(newPath);
   }
 }

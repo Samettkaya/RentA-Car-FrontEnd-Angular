@@ -1,0 +1,114 @@
+<div class="container mt-3 content">
+  <div class="col-lg">
+      <div class="card">
+          <div class="card-header">
+              <h4>Arabayı Güncelle</h4>
+          </div>
+          <div class="card-body">
+              <form [formGroup]="carUpdateForm">
+                <div class="row mb-3">
+                    <div class="col-lg-2">
+                        <label for="carName" class="form-label">Araba İsmi</label>
+                    </div>
+                    <div class="col-lg">
+                        <input type="string" class="form-control" id="carName" formControlName="carName"
+                            placeholder="Araba ismi"/>
+                            <!-- [ngClass]="{ 'is-invalid': carFormControls.dailyPrice.touched && carFormControls.dailyPrice.errors }"  -->
+                            
+                        <div
+                            class="invalid-feedback">
+                            <div >Daily price is required</div>
+                        </div>
+                    </div>
+                </div>
+                  <div class="row mb-3">
+                      <div class="col-lg-2">
+                          <label for="brandSelect" class="form-label">Brand:</label>
+                      </div>
+                      <div class="col-lg">
+                          <select id="brandSelect" class="form-select" size="3" formControlName="brandId">
+                              <option selected>Select a brand</option>
+                              <option *ngFor="let brand of brands" value="{{brand.brandId}}">{{brand.brandName}}
+                              </option>
+                          </select>
+                      </div>
+                  </div>
+                  <div class="row mb-3">
+                      <div class="col-lg-2">
+                          <label for="colorSelect" class="form-label">Color:</label>
+                      </div>
+                      <div class="col-lg">
+                          <select id="colorSelect" class="form-select" size="3" formControlName="colorId">
+                              <option selected>Select a color</option>
+                              <option *ngFor="let color of colors" value="{{color.colorId}}">{{color.colorName}}
+                              </option>
+                          </select>
+                      </div>
+                  </div>
+                  <div class="row mb-3">
+                      <div class="col-lg-2">
+                          <label for="colorSelect" class="form-label">Model Year:</label>
+                      </div>
+                      <div class="col-lg">
+                          <select id="modelYearSelect" class="form-select" size="3" formControlName="modelYear">
+                              <option selected>Select a model</option>
+                              <option *ngFor="let year of modelYearList" value="{{year}}">{{year}}
+                              </option>
+                          </select>
+                      </div>
+                  </div>
+                  <div class="row mb-3">
+                      <div class="col-lg-2">
+                          <label for="dailyPriceInput" class="form-label">Daily Price:</label>
+                      </div>
+                      <div class="col-lg">
+                          <input type="number" class="form-control" id="dailyPriceInput" formControlName="dailyPrice"
+                              placeholder="e.g. 250"/>
+                              <!-- [ngClass]="{ 'is-invalid': carFormControls.dailyPrice.touched && carFormControls.dailyPrice.errors }"  -->
+                              
+                          <div
+                              class="invalid-feedback">
+                              <div >Daily price is required</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="row mb-3">
+                      <div class="col-lg-2">
+                          <label for="descriptionInput" class="form-label">Description:</label>
+                      </div>
+                      <div class="col-lg">
+                          <textarea class="form-control" id="descriptionInput" rows="3" formControlName="description"
+                              placeholder="Description..."
+                              [ngClass]="{ 'is-invalid': carFormControls.description.touched && carFormControls.description.errors }">
+                              <div *ngIf="carFormControls.description.touched && carFormControls.description.errors"
+                                  class="invalid-feedback">
+                                  <div *ngIf="carFormControls.description.errors.required">Description is required</div>
+
+                          </textarea>
+                      </div>
+                  </div>
+                  <!-- <div class="row mb-3">
+                      <div class="col-lg-2">
+                          <label for="findeksScoreInput" class="form-label">Findeks Score:</label>
+                      </div>
+                      <div class="col-lg">
+                          <input type="number" class="form-control" id="findeksScoreInput"
+                              formControlName="findeksScore" placeholder="e.g. 250"
+                              [ngClass]="{ 'is-invalid': carFormControls.findeksScore.touched && carFormControls.findeksScore.errors }" />
+                          <div *ngIf="carFormControls.findeksScore.touched && carFormControls.findeksScore.errors"
+                              class="invalid-feedback">
+                              <div *ngIf="carFormControls.findeksScore.errors.required">Findeks Score is required
+                              </div>
+                          </div>
+                      </div>
+                  </div> -->
+              </form>
+          </div>
+          <div class="card-footer">
+              <div class="d-grid gap-2">
+                  <button class="btn btn-warning" (click)="updateCar()" type="button">Update</button>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup,FormControl, Validators } from '@angular/forms';
-import { CarService } from '../../../services/car.service';
+import { CarService } from '../../../../../services/car.service';
 
-import { BrandService } from '../../../services/brand.service';
+import { BrandService } from '../../../../../services/brand.service';
 
-import { ColorService } from '../../../services/color.service';
+import { ColorService } from '../../../../../services/color.service';
 import { ToastrService } from 'ngx-toastr';
 import { Brand } from 'src/app/models/brand';
 import { Color } from 'src/app/models/color';
@@ -67,7 +67,7 @@ export class CarAddComponent implements OnInit {
         responseError => {
         if(responseError.error.ValidationErrors.length > 0) {
           for(let i=0;i<responseError.error.ValidationErrors.length;i++) {
-            this.toastrService.error(responseError.error.ValidationErrors[i].ErrorMessage,"Doğrulama Hatası")
+            this.toastrService.error(responseError.error.ValidationErrors[i].ErrorMessage,"Araç Eklenemedi")
           }
         }
       })

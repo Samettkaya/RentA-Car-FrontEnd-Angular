@@ -1,0 +1,37 @@
+
+<div class="container">
+   
+    <table class="table ">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Araba İsmi</th>
+          <th>Marka</th>
+          <th>Renk</th>
+          <th>Model</th>
+          <th>Günlük Fiyat</th>
+          <th>Açıklama</th>
+          <th>
+            <button routerLink="add" type="button" class="btn btn-outline-dark">+ Ekle</button>
+          </th>
+       
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let car of cars">
+          <td>{{car.carId}}</td>
+          <td>{{car.carName}}</td>
+          <td>{{car.brandName}}</td>
+          <td>{{car.colorName}}</td>
+          <td>{{car.modelYear}}</td>
+          <td>{{car.dailyPrice}}</td>
+          <td>{{car.description}}</td>
+          <td>
+            <button routerLink="edit/{{car.carId}}" type="button" class="btn btn-outline-info mx-2">Güncelle</button>
+          </td>
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>

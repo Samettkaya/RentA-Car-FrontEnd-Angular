@@ -24,9 +24,9 @@ import { CarFilterComponent } from './components/car-filter/car-filter.component
 
 import { ToastrModule } from 'ngx-toastr';
 import { CreditCardComponent } from './components/creditcard/creditcard.component';
-import { CarAddComponent } from './components/car/car-add/car-add.component';
-import { CarEditComponent } from './components/car/car-edit/car-edit.component';
-import { BrandAddComponent } from './components/brand/brand-add/brand-add.component';
+import { CarAddComponent } from './components/pages/admin-dashboard/cars-dashboard/car-add/car-add.component';
+
+import { BrandAddComponent } from './components/pages/admin-dashboard/brands-dashboard/brand-add/brand-add.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
@@ -34,6 +34,10 @@ import { AdminDashboardComponent } from './components/pages/admin-dashboard/admi
 import { ColorsDashboardComponent } from './components/pages/admin-dashboard/colors-dashboard/colors-dashboard.component';
 import { ColorAddComponent } from './components/pages/admin-dashboard/colors-dashboard/color-add/color-add.component';
 import { ColorEditComponent } from './components/pages/admin-dashboard/colors-dashboard/color-edit/color-edit.component';
+import { BrandsDashboardComponent } from './components/pages/admin-dashboard/brands-dashboard/brands-dashboard.component';
+import { BrandEditComponent } from './components/pages/admin-dashboard/brands-dashboard/brand-edit/brand-edit.component';
+import { CarsDashboardComponent } from './components/pages/admin-dashboard/cars-dashboard/cars-dashboard.component';
+import { CarEditComponent } from './components/pages/admin-dashboard/cars-dashboard/car-edit/car-edit.component';
 
 
 
@@ -64,6 +68,9 @@ import { ColorEditComponent } from './components/pages/admin-dashboard/colors-da
     AdminDashboardComponent,
     ColorsDashboardComponent,
     ColorEditComponent,
+    BrandsDashboardComponent,
+    BrandEditComponent,
+    CarsDashboardComponent,
    
     
   

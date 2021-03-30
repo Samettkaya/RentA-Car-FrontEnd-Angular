@@ -1,10 +1,10 @@
 export interface DashboardCars {
     carId: number;
     carName: string;
-    brandId: number;
-    colorId: number;
+    brandName: string;
+    colorName: string;
     dailyPrice: number;
     modelYear: number;
-    description: number;
+    description: string;
   }
   

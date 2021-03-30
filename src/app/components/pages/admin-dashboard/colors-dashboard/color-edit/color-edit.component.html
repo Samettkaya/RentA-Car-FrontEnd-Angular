@@ -3,7 +3,7 @@
   
     <div class="card-body">
   
-      <form [formGroup]="colorUpdateForm">
+      <form [formGroup]="colorEditForm">
  
         <div class="row">
             <div class="mb-3">
@@ -19,7 +19,8 @@
     </div>
   
     <div class="card-footer">
-      <button class="btn btn-fill btn-primary" [routerLink]="['/admin/colors']" (click)="updateColor()"> Renk Güncelle</button>
+      <button class="btn btn-fill btn-danger" [routerLink]="['/admin/colors']" (click)="deleteColor()"> Sil</button>
+      <button class="btn btn-fill btn-primary" [routerLink]="['/admin/colors']" (click)="updateColor()">Güncelle</button>
     </div>
  
   </div>

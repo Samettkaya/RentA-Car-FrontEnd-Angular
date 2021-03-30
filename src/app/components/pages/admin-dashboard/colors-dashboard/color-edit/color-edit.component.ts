@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 import { ToastrService } from "ngx-toastr";
 import { Color } from "src/app/models/color";
 import { ColorService } from "src/app/services/color.service";
@@ -13,13 +13,14 @@ import { ColorService } from "src/app/services/color.service";
 export class ColorEditComponent implements OnInit {
  
   color:Color;
-  colorUpdateForm : FormGroup;
+  colorEditForm : FormGroup;
   
   constructor(
     private formBuilder:FormBuilder,
     private activatedRoute:ActivatedRoute,
     private colorService:ColorService,
-    private toastrService: ToastrService
+    private toastrService: ToastrService,
+    private router:Router
   ) { }
 
   ngOnInit(): void {
@@ -32,7 +33,7 @@ export class ColorEditComponent implements OnInit {
   }
 
   createColorUpdateForm(){
-    this.colorUpdateForm = this.formBuilder.group({
+    this.colorEditForm = this.formBuilder.group({
       colorName: ["",Validators.required]
     })
   }
@@ -44,10 +45,9 @@ export class ColorEditComponent implements OnInit {
   }
 
   updateColor(){
-    if(this.colorUpdateForm.valid){      
-      let colorModel = Object.assign({},this.colorUpdateForm.value)
+    if(this.colorEditForm.valid){      
+      let colorModel = Object.assign({},this.colorEditForm.value)
       colorModel.colorId = Number(this.color.colorId)
-      console.log(colorModel.id)
       this.colorService.updateColor(colorModel).subscribe(response=>{
         this.toastrService.success(response.message)
       },responseError=>{
@@ -58,4 +58,27 @@ export class ColorEditComponent implements OnInit {
     }    
   }
 
+
+
+  
+  deleteColor() {
+    if (window.confirm('Rengi Sildiğine  emin misin?')) {
+      let colorModule: Color = {
+        colorId: this.color.colorId,
+        ...this.colorEditForm.value,
+      };
+      this.colorService.deleteColor(colorModule).subscribe(
+        (response) => {
+          this.toastrService.success(response.message);
+          this.router.navigate(['admin', 'colors']);
+        },
+        (responseError) => {
+          if (responseError.error.Errors.length > 0)
+            responseError.error.Errors.forEach((error: any) =>
+              this.toastrService.error(error.ErrorMessage)
+            );
+        }
+      );
+    }
+  }
 }
