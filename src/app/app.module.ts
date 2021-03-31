@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import  {HttpClientModule } from '@angular/common/http';
+import  {HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import {FormsModule,ReactiveFormsModule} from '@angular/forms'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -38,6 +38,7 @@ import { BrandsDashboardComponent } from './components/pages/admin-dashboard/bra
 import { BrandEditComponent } from './components/pages/admin-dashboard/brands-dashboard/brand-edit/brand-edit.component';
 import { CarsDashboardComponent } from './components/pages/admin-dashboard/cars-dashboard/cars-dashboard.component';
 import { CarEditComponent } from './components/pages/admin-dashboard/cars-dashboard/car-edit/car-edit.component';
+import { AuthInterceptor } from './interceptors/auth.interceptor';
 
 
 
@@ -92,7 +93,9 @@ import { CarEditComponent } from './components/pages/admin-dashboard/cars-dashbo
     }),
 
   ],
-  providers: [],
+  providers: [
+    {provide:HTTP_INTERCEPTORS,useClass:AuthInterceptor,multi:true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

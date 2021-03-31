@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup,FormControl, Validators } from '@angular/forms';
 import { CarService } from '../../../../../services/car.service';
-
 import { BrandService } from '../../../../../services/brand.service';
-
 import { ColorService } from '../../../../../services/color.service';
 import { ToastrService } from 'ngx-toastr';
 import { Brand } from 'src/app/models/brand';
@@ -16,7 +14,7 @@ import { Color } from 'src/app/models/color';
   styleUrls: ['./car-add.component.css']
 })
 export class CarAddComponent implements OnInit {
-
+  apiUrl="https://localhost:44388/api/";
   brands:Brand[];
   colors:Color[];
   carAddForm:FormGroup;
@@ -64,6 +62,7 @@ export class CarAddComponent implements OnInit {
         response => {
         this.toastrService.success(response.message,"Başarılı")
         },
+       
         responseError => {
         if(responseError.error.ValidationErrors.length > 0) {
           for(let i=0;i<responseError.error.ValidationErrors.length;i++) {

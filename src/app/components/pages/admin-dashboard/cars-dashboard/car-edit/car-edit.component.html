@@ -13,21 +13,16 @@
                     <div class="col-lg">
                         <input type="string" class="form-control" id="carName" formControlName="carName"
                             placeholder="Araba ismi"/>
-                            <!-- [ngClass]="{ 'is-invalid': carFormControls.dailyPrice.touched && carFormControls.dailyPrice.errors }"  -->
                             
-                        <div
-                            class="invalid-feedback">
-                            <div >Daily price is required</div>
-                        </div>
                     </div>
                 </div>
                   <div class="row mb-3">
                       <div class="col-lg-2">
-                          <label for="brandSelect" class="form-label">Brand:</label>
+                          <label for="brandSelect" class="form-label">Marka:</label>
                       </div>
                       <div class="col-lg">
                           <select id="brandSelect" class="form-select" size="3" formControlName="brandId">
-                              <option selected>Select a brand</option>
+                              <option selected>Marka seçin</option>
                               <option *ngFor="let brand of brands" value="{{brand.brandId}}">{{brand.brandName}}
                               </option>
                           </select>
@@ -35,11 +30,11 @@
                   </div>
                   <div class="row mb-3">
                       <div class="col-lg-2">
-                          <label for="colorSelect" class="form-label">Color:</label>
+                          <label for="colorSelect" class="form-label">Renk:</label>
                       </div>
                       <div class="col-lg">
                           <select id="colorSelect" class="form-select" size="3" formControlName="colorId">
-                              <option selected>Select a color</option>
+                              <option selected>Renk seçin</option>
                               <option *ngFor="let color of colors" value="{{color.colorId}}">{{color.colorName}}
                               </option>
                           </select>
@@ -47,11 +42,11 @@
                   </div>
                   <div class="row mb-3">
                       <div class="col-lg-2">
-                          <label for="colorSelect" class="form-label">Model Year:</label>
+                          <label for="colorSelect" class="form-label">Model Yılı:</label>
                       </div>
                       <div class="col-lg">
                           <select id="modelYearSelect" class="form-select" size="3" formControlName="modelYear">
-                              <option selected>Select a model</option>
+                              <option selected>Model seçin</option>
                               <option *ngFor="let year of modelYearList" value="{{year}}">{{year}}
                               </option>
                           </select>
@@ -59,30 +54,22 @@
                   </div>
                   <div class="row mb-3">
                       <div class="col-lg-2">
-                          <label for="dailyPriceInput" class="form-label">Daily Price:</label>
+                          <label for="dailyPriceInput" class="form-label">Günlük Fiyat:</label>
                       </div>
                       <div class="col-lg">
                           <input type="number" class="form-control" id="dailyPriceInput" formControlName="dailyPrice"
                               placeholder="e.g. 250"/>
-                              <!-- [ngClass]="{ 'is-invalid': carFormControls.dailyPrice.touched && carFormControls.dailyPrice.errors }"  -->
-                              
-                          <div
-                              class="invalid-feedback">
-                              <div >Daily price is required</div>
-                          </div>
                       </div>
                   </div>
                   <div class="row mb-3">
                       <div class="col-lg-2">
-                          <label for="descriptionInput" class="form-label">Description:</label>
+                          <label for="descriptionInput" class="form-label">Açıklama:</label>
                       </div>
                       <div class="col-lg">
                           <textarea class="form-control" id="descriptionInput" rows="3" formControlName="description"
-                              placeholder="Description..."
+                              placeholder="Açıklama..."
                               [ngClass]="{ 'is-invalid': carFormControls.description.touched && carFormControls.description.errors }">
-                              <div *ngIf="carFormControls.description.touched && carFormControls.description.errors"
-                                  class="invalid-feedback">
-                                  <div *ngIf="carFormControls.description.errors.required">Description is required</div>
+                              
 
                           </textarea>
                       </div>

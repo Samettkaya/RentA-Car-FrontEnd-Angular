@@ -4,8 +4,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Brand } from 'src/app/models/brand';
 import { Car } from 'src/app/models/car';
+import { CarImage } from 'src/app/models/carImage';
 import { Color } from 'src/app/models/color';
 import { BrandService } from 'src/app/services/brand.service';
+import { CarImageService } from 'src/app/services/car-image.service';
 import { CarService } from 'src/app/services/car.service';
 import { ColorService } from 'src/app/services/color.service';
 
@@ -16,6 +18,7 @@ import { ColorService } from 'src/app/services/color.service';
 })
 export class CarEditComponent implements OnInit {
   car: Car;
+  carImages:CarImage[]=[];
   carUpdateForm: FormGroup;
   colors: Color[] = [];
   brands: Brand[] = [];
@@ -23,6 +26,7 @@ export class CarEditComponent implements OnInit {
   selectedBrand: number;
   modelYearList: number[] = [];
 
+  imageUrl="https://localhost:44388";
 
   constructor(
     private carService: CarService,
@@ -31,7 +35,8 @@ export class CarEditComponent implements OnInit {
     private router: Router,
     private formBuilder: FormBuilder,
     private colorService: ColorService,
-    private brandService: BrandService
+    private brandService: BrandService,
+    private carImageService:CarImageService
   ) { }
 
   ngOnInit(): void {
@@ -43,6 +48,7 @@ export class CarEditComponent implements OnInit {
         this.getBrands();
         this.createModelYearArray();
       }
+      this.getImagesByCarId();
     });
   }
 
@@ -63,6 +69,19 @@ export class CarEditComponent implements OnInit {
     this.brandService.getBrands().subscribe(response => {
       this.brands = response.data;
     });
+  }
+  getImagesByCarId(){
+    
+    this.carImageService.getCarImages(this.activatedRoute.snapshot.params["carId"]).subscribe((response)=>{
+      this.carImages=response.data;      
+    });
+  }
+  getCurrentImageClass(image:CarImage){
+    if(image==this.carImages[0]){
+      return "carousel-item active"
+    } else {
+      return "carousel-item"
+    }
   }
 
   getCurrentCar(carId: number) {
