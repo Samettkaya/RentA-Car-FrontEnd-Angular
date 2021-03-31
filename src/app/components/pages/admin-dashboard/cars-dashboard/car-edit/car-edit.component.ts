@@ -120,4 +120,26 @@ export class CarEditComponent implements OnInit {
     }
 
   }
+
+  deleteCar() {
+    if (window.confirm('Arabayı sildiğine emin misin?')) {
+      let carModule: Car = {
+        brandId: this.car.carId,
+        ...this.carUpdateForm.value,
+      };
+      this.carService.deletCar(carModule).subscribe(
+        (response) => {
+          this.toastrService.success(response.message);
+          this.router.navigate(['admin', 'brands']);
+        },
+        (responseError) => {
+          if (responseError.error.Errors.length > 0)
+            responseError.error.Errors.forEach((error: any) =>
+              this.toastrService.error(error.ErrorMessage)
+            );
+        }
+      );
+    }
+  }
+
 }

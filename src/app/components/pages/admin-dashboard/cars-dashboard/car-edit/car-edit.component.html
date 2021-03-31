@@ -87,26 +87,13 @@
                           </textarea>
                       </div>
                   </div>
-                  <!-- <div class="row mb-3">
-                      <div class="col-lg-2">
-                          <label for="findeksScoreInput" class="form-label">Findeks Score:</label>
-                      </div>
-                      <div class="col-lg">
-                          <input type="number" class="form-control" id="findeksScoreInput"
-                              formControlName="findeksScore" placeholder="e.g. 250"
-                              [ngClass]="{ 'is-invalid': carFormControls.findeksScore.touched && carFormControls.findeksScore.errors }" />
-                          <div *ngIf="carFormControls.findeksScore.touched && carFormControls.findeksScore.errors"
-                              class="invalid-feedback">
-                              <div *ngIf="carFormControls.findeksScore.errors.required">Findeks Score is required
-                              </div>
-                          </div>
-                      </div>
-                  </div> -->
+    
               </form>
           </div>
           <div class="card-footer">
               <div class="d-grid gap-2">
-                  <button class="btn btn-warning" (click)="updateCar()" type="button">Update</button>
+                  <button class="btn btn-warning" (click)="updateCar()" type="button">Güncelle</button>
+                   <button class="btn btn-danger" (click)="deleteCar()" type="button">Sil</button>
               </div>
           </div>
       </div>
