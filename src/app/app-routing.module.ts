@@ -17,17 +17,19 @@ import { BrandsDashboardComponent } from './components/pages/admin-dashboard/bra
 import { BrandEditComponent } from './components/pages/admin-dashboard/brands-dashboard/brand-edit/brand-edit.component';
 import { CarsDashboardComponent } from './components/pages/admin-dashboard/cars-dashboard/cars-dashboard.component';
 import { LoginGuard } from './guards/login.guard';
+import { HomeComponent } from './components/home/home/home.component';
 
 const routes: Routes = [
-  {path:"",pathMatch:"full",component:CarComponent},  
-  {path:"cars",component:CarComponent},
+  {path:"",pathMatch:"full",component:HomeComponent},  
+  {path:"home",component:HomeComponent}, 
+  {path:"cars",component:CarComponent,},
   {path:"cars/brand/:brandId",component:CarComponent},
   {path:"cars/color/:colorId",component:CarComponent},
   {path:"cars/brand/:brandId/color/:colorId", component:CarComponent},
   {path:"car/details/:carId", component:CarDetailComponent},
   {path:"cars/car-detail/:carId", component:CarDetailComponent},
   {path:"cars/filter/:brandId/:colorId",component:CarComponent},
-  {path:"car/rental/:carId",component:RentalComponent},
+  {path:"car/rental/:carId",component:RentalComponent,canActivate:[LoginGuard]},
   {path:"creditcard/:rental", component:CreditCardComponent},
   {path:"login",component:LoginComponent},
   {path:"register",component:RegisterComponent},

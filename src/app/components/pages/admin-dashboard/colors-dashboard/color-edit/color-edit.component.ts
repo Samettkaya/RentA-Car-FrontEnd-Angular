@@ -49,12 +49,13 @@ export class ColorEditComponent implements OnInit {
       let colorModel = Object.assign({},this.colorEditForm.value)
       colorModel.colorId = Number(this.color.colorId)
       this.colorService.updateColor(colorModel).subscribe(response=>{
-        this.toastrService.success(response.message)
+        this.toastrService.success(response.message,"Başarılı")
+        this.router.navigate(['admin', 'colors']);
       },responseError=>{
-        this.toastrService.success(responseError.message)
+        this.toastrService.success(responseError.message,"Hata")
       })
     }else{
-      this.toastrService.error("Form eksik","Hata")
+      this.toastrService.error("Form eksik","Dikkat")
     }    
   }
 

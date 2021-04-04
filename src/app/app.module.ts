@@ -39,6 +39,7 @@ import { BrandEditComponent } from './components/pages/admin-dashboard/brands-da
 import { CarsDashboardComponent } from './components/pages/admin-dashboard/cars-dashboard/cars-dashboard.component';
 import { CarEditComponent } from './components/pages/admin-dashboard/cars-dashboard/car-edit/car-edit.component';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
+import { HomeComponent } from './components/home/home/home.component';
 
 
 
@@ -72,6 +73,7 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
     BrandsDashboardComponent,
     BrandEditComponent,
     CarsDashboardComponent,
+    HomeComponent,
    
     
   
