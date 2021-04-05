@@ -18,6 +18,9 @@ import { BrandEditComponent } from './components/pages/admin-dashboard/brands-da
 import { CarsDashboardComponent } from './components/pages/admin-dashboard/cars-dashboard/cars-dashboard.component';
 import { LoginGuard } from './guards/login.guard';
 import { HomeComponent } from './components/home/home/home.component';
+import { UserComponent } from './components/auth/user-profil/user-profil.component';
+import { UsereditComponent } from './components/auth/user-profil/useredit/useredit.component';
+
 
 const routes: Routes = [
   {path:"",pathMatch:"full",component:HomeComponent},  
@@ -33,6 +36,12 @@ const routes: Routes = [
   {path:"creditcard/:rental", component:CreditCardComponent},
   {path:"login",component:LoginComponent},
   {path:"register",component:RegisterComponent},
+
+  {path:"user",component:UserComponent,
+  children:[
+    {path:"edituser",component:UsereditComponent}
+  ]
+},
 
   {
     path: 'admin',

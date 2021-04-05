@@ -6,4 +6,12 @@ import { Injectable } from '@angular/core';
 export class LocalStorageService {
 
   constructor() { }
+
+  getItem(token:string){
+    return localStorage.getItem(token);
+ 
+   }
+   clear(){
+     localStorage.clear()
+   }
 }

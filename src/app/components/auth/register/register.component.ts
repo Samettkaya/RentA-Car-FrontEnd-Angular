@@ -34,21 +34,22 @@ export class RegisterComponent implements OnInit {
   register(){
     if(this.registerForm.valid){
       let registerModel =Object.assign({},this.registerForm.value)
-        console.log(registerModel)
         this.authService.register(registerModel).subscribe(response=>{
         this.toasterService.success(response.message,"Başarılı")
         this.dataLoaded=true
         
       }
       ,responseError=>{
+       
         if(responseError.error.ValidationErrors.length > 0) {
-            this.toasterService.error(responseError.error,"Dikkat!")
+         
+          this.toasterService.error(responseError.error,"Hata!")
         }
         
       })
     }
      else {
-      this.toasterService.error("Formunuz Eksik","Dikkat!")
+      this.toasterService.error("Lütfen tüm alanları doldurunuz","Dikkat!")
     }
   }
 }

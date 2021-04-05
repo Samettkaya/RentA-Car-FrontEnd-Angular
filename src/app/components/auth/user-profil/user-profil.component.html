@@ -1,0 +1,43 @@
+
+<div class="container bootstrap snippets bootdey">
+<div class="row">
+  <div class="profile-nav col-md-3">
+      <div class="panel">
+          <div class="user-heading round">
+              <a >
+                  <img src="https://i.pinimg.com/736x/3f/94/70/3f9470b34a8e3f526dbdb022f9f19cf7.jpg" alt="">
+              </a>
+              <h1 class="mt-3 mb-3">{{lastName+" "+firstName}}</h1>
+              <p>{{email}}</p>
+          </div>
+
+          <ul class="list-group nav nav-pills nav-stacked">
+              <li class="list-group-item" routerLink="/user"> <i class="fa fa-user"></i> Profile</li>
+              <li class="list-group-item" routerLink="edituser"> <i class="fa fa-edit"></i> Edit profile</li>
+          </ul>
+      </div>
+  </div>
+  <div class="profile-info col-md-9">
+    <div class="panel">
+        <div class="panel-body bio-graph-info">
+            <h1>Hesabım </h1>
+            <div class="row">
+                <div class="bio-row">
+                    <p><span>Ad</span>: {{lastName}}</p>
+                </div>
+                <div class="bio-row">
+                    <p><span>Soyad </span>: {{firstName}}</p>
+                </div>
+                <div class="bio-row">
+                    <p><span>E-posta </span>: {{email}}</p>
+                </div>
+              
+            </div>
+        </div>
+    </div>
+    
+    <router-outlet></router-outlet>
+     
+  </div>
+</div>
+</div>

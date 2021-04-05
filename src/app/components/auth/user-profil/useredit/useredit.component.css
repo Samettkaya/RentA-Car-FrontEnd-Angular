@@ -1,0 +1,12 @@
+.p-button{
+    border-color:#f22324;
+    color: #ffffff;
+    background-color: #f22324;
+    margin-right: 5px;
+ }
+
+ .p-button:hover{
+    background-color: transparent;
+    color: #f22324;
+    border-color:#f22324;
+ }

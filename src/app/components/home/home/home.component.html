@@ -2,18 +2,11 @@
 
   <!-- slider stylesheet -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-
-
-
-
-
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,600,700&display=swap" rel="stylesheet">
 
 
-
   <div class="hero_area">
-    <!-- slider section -->
-    <section class=" slider_section position-relative">
+    <div class=" slider_section position-relative">
       <div class="slider_container">
         <div class="img-box">
           <img src="../../../../assets/İmg/hero-img.jpg" alt="">
@@ -24,183 +17,111 @@
               <div class="carousel-item active">
                 <div class="detail-box">
                   <h1>
-                    Rent Car <br>
-                    Experts <br>
-                    Service
+                    1 Numaralı <br> Araba Kiralama <br> Hizmeti
+                    
                   </h1>
-                  <a href="">
-                    Contact Us
+                  <a routerLink="/cars">
+                    Araçlarımız
                   </a>
                 </div>
               </div>
             </div>
-           
           </div>
-
         </div>
       </div>
-    </section>
-    <!-- end slider section -->
+    </div>
   </div>
 
 
   <!-- car section -->
 
-  <section class="car_section layout_padding2-top layout_padding-bottom">
+  <div class=" container-flued car_section layout_padding2-top layout_padding-bottom ">
     <div class="container">
       <div class="heading_container">
         <h2>
-          Better Way For Find Your Favourite Cars
+          En Sevdiğiniz Otomobilleri Bulmanın Daha İyi Bir Yolu
         </h2>
         <p>
-          It is a long established fact that a reader will be distracted by the readable
+          "Yepyeni bir araç kiralama deneyimi" anlayışı ile çok kısa sürede önemli atılımlar yaparak büyüyen marka, her geçen gün artan hizmet noktaları ile müşterilerine kaliteden ödün vermeden hizmet vermeye devam etmektedir.
         </p>
       </div>
-      <div class="car_container">
-        <div class="box">
-          <div class="img-box">
-            <img src="../../../../assets/İmg/c-1.png" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              Choose Your Car
-            </h5>
-            <p>
-              It is a long established fact that a reader will be distracted by the readable content of a page when
-            </p>
-            <a href="">
-              Read More
-            </a>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img-box">
-            <img src="../../../../assets/İmg/c-2.png" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              Get Your Car
-            </h5>
-            <p>
-              It is a long established fact that a reader will be distracted by the readable content of a page when
-            </p>
-            <a href="">
-              Read More
-            </a>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img-box">
-            <img src="../../../../assets/İmg/c-3.png" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              Contact Your Dealer
-            </h5>
-            <p>
-              It is a long established fact that a reader will be distracted by the readable content of a page when
-            </p>
-            <a href="">
-              Read More
-            </a>
-          </div>
+     
+    
+    </div>
+  </div>
+  
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="card h-100">
+        <img src="../../../../assets/İmg/c-1.png" class="card-img-top h-100  p-5" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Arabanızı Seçin</h5>
+          <p class="card-text">Esnek koltuk yerleşimi, Otomatik Vites ve Manuel Vites seçenekleri ile ihtiyacınıza uygun arabaları seçim yapabilirsiniz.</p>
+          <a href="#" class="btn btn-primary auth">Seç</a>
         </div>
       </div>
     </div>
-  </section>
-
+    <div class="col">
+      <div class="card h-100">
+        <img src="../../../../assets/İmg/c-2.png" class="card-img-top h-100 p-5" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Arabanızı Alın</h5>
+          <p class="card-text">Belirlediğiniz noktada aracınızı alabilir ve teslim edebilirsiniz </p>
+          <a href="#" class="btn btn-primary auth">Seç</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="../../../../assets/İmg/c-3.png"  class="card-img-top h-100  p-5" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Bayinizle İletişime Geçin</h5>
+          <p class="card-text">Araçla ilgili birlgi almak için ilgili bayiyle iletişime geçebilirsiniz</p>
+          <a href="#" class="btn btn-primary auth">Seç</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
   <!-- end car section -->
 
   <!-- about section -->
 
-  <section class="about_section layout_padding-bottom">
-    
-      <div class="row">
-        <div class="col-md-12 "style="background-color: crimson;">
-            <div id="carouselExampleIndicators" class="carousel slide  best_section" data-bs-ride="carousel">
-                
-                <div class="carousel-indicators">
-                <button *ngFor="let image of cars;let i = index" type="button" data-bs-target="#carouselExampleIndicators" attr.data-bs-slide-to="{{i}}" [class]="getButtonClass(image)" aria-current="true" aria-label="Slide 1"></button>
-              </div>
-              <div class="carousel-inner">
-                <div *ngFor="let car of cars" [class]="getCurrentImageClass(car)">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <img src="{{imageUrl}}{{car.imagePath}}" class="d-block w-100"  height="300"  alt="Image">
-                        </div>
-                        <div class="col-md-6 detail-box">
-                            <div class="card mb-4 rounded-3 shadow-sm">
-                                <div class="card-header py-3">
-                                  <h4 class="my-0 fw-normal">{{car.carName}}</h4>
-                                </div>
-                                <div class="card-body">
-                                  <h1 class="card-title pricing-card-title">TL{{car.dailyPrice}} <small class="text-muted fw-light">/Gün</small></h1>
-                                  <ul class="list-unstyled mt-3 mb-4">
-                                    <li>{{car.brandName}}</li>
-                                    <li>{{car.carName}}</li>
-                                    <li>{{car.description}}</li>
-                                    <li>Help center access</li>
-                                  </ul>
-                                     <a class="w-30 " routerLink="/car/details/{{car.carId}}">
-                                        Detay
-                                    </a>
-                                </div>
-                              </div>
-                       
-                            
-                        </div>
-                
-                    </div>
-                
-                </div>
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="next">
-                <span  class="carousel-control-next-icon "  aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-    </div> 
-</div> 
-      </div>
-    
-  </section>
 
   <!-- end about section -->
 
 
   <!-- best section -->
 
-  <section class="best_section">
-    <div class="container">
+  <div class="container-flued best_section mt-5">
+    <div class="container ">
       <div class="book_now">
         <div class="detail-box">
           <h2>
-           En iyi Arabalarımız
+            En iyi Arabalarımız
           </h2>
           <p>
             Yeni araçlarla konforlu bir yolculuğun tadını çıkarın
           </p>
         </div>
-        <div class="btn-box">
+        <!-- <div class="btn-box">
           <a href="">
             Şimdi Rezervasyon Yapın
           </a>
-        </div>
+        </div> -->
       </div>
     </div>
-  </section>
+  </div>
 
   <!-- end best section -->
 
   <!-- rent section -->
 
-  <section class="rent_section layout_padding">
+  <div class="container-flued rent_section layout_padding">
     <div class="container ">
       <div class="rent_container " >
-        <div class="box" *ngFor="let car of cars">
+        <div class="box card" *ngFor="let car of cars">
           <div class="img-box">
             <img src="{{imageUrl}}{{car.imagePath}}" alt="{{imageUrl}}{{car.imagePath}}" class="card-img-top" width="320" height="200">
           </div>
@@ -212,12 +133,12 @@
         </div>
       </div>
       <div class="btn-box">
-        <a href="">
+        <a routerLink="/cars">
           Daha fazla 
         </a>
       </div>
     </div>
-  </section>
+  </div>
 
 
   <!-- end rent section -->
@@ -226,16 +147,17 @@
 
   <!-- us section -->
 
-  <section class="us_section">
-    <div class="container">
-      <div class="heading_container">
+  <div class="container-flued us_section">
+    <div class="container mt-5">
+      <div class="heading_container mb-5">
         <h2 class="mb-5">
             Neden bizi seçmelisiniz
         </h2>
-       
+       <p>
+        Bizi seçin, çünkü eşsiz bir deneyim, sıcak bir karşılama ve mükemmel bir hizmet alacağınızdan eminiz. Biz ihtiyaçlarınızı yerine getirmeye, uygun fiyatlı, güvenilir ve yaratıcı olmaya tamamen hazırız. Hizmetlerimiz size gelip gelmeyeceğinize yöneliktir. Bu bölgedeki araç kiralama sektöründe lider olarak büyümek ve gelişmek konusunda tutkuluyuz. Dostça bir yaklaşımla hızlı ve profesyonel hizmet bizim en büyük önceliğimizdir ve bu yüzden sizinle birlikte en iyi yaptığımız şeyi yapıyoruz.</p>
       </div>
     </div>
-    <div  class="us_container layout_padding2">
+    <div  class=" us_container layout_padding2">
       <div class="content_box">
         <div class="box">
           <div class="img-box">
@@ -278,168 +200,20 @@
           </div>
         </div>
       </div>
-      <div class="btn-box">
-        <a href="">
-          Read More
-        </a>
-      </div>
+  
     </div>
-  </section>
+  </div>
 
   <!-- end us section -->
 
-  <!-- client section -->
 
-  <section class="client_section layout_padding">
-    <div class="container">
-      <div class="heading_container">
-        <h2>
-          What Is say Customer
-        </h2>
-        <p>
-          It is a long established fact that a reader will be distracted by the
-        </p>
-      </div>
-      <div class="layout_padding2-top">
-        <div class="carousel-wrap ">
-          <div class="owl-carousel">
-            <div class="item">
-              <div class="box">
-                <div class="detail-box">
-                  <p>
-                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem
-                  </p>
-                </div>
-                <div class="client_id">
-                  <div class="img-box">
-                    <img src="../../../../assets/İmg/client-1.png" alt="" class="img-1">
-                    <img src="../../../../assets/İmg/client-1-white.png" alt="" class="img-2">
-                  </div>
-                  <div class="name">
-                    <h6>
-                      Established
-                    </h6>
-                    <p>
-                      by the readable
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="box">
-                <div class="detail-box">
-                  <p>
-                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem
-                  </p>
-                </div>
-                <div class="client_id">
-                  <div class="img-box">
-                    <img src="../../../../assets/İmg/client-2.png" alt="" class="img-1">
-                    <img src="../../../../assets/İmg/client-2-white.png" alt="" class="img-2">
-                  </div>
-                  <div class="name">
-                    <h6>
-                      Blished
-                    </h6>
-                    <p>
-                      by the readable
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="box">
-                <div class="detail-box">
-                  <p>
-                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem
-                  </p>
-                </div>
-                <div class="client_id">
-                  <div class="img-box">
-                    <img src="../../../../assets/İmg/client-1.png" alt="" class="img-1">
-                    <img src="../../../../assets/İmg/client-1-white.png" alt="" class="img-2">
-                  </div>
-                  <div class="name">
-                    <h6>
-                      Establi
-                    </h6>
-                    <p>
-                      by the readable
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="box">
-                <div class="detail-box">
-                  <p>
-                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem
-                  </p>
-                </div>
-                <div class="client_id">
-                  <div class="img-box">
-                    <img src="../../../../assets/İmg/client-1.png" alt="" class="img-1">
-                    <img src="../../../../assets/İmg/client-1-white.png" alt="" class="img-2">
-                  </div>
-                  <div class="name">
-                    <h6>
-                      Establi
-                    </h6>
-                    <p>
-                      by the readable
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- end client section -->
 
   <!-- contact section -->
 
-  <section src="../../../../assets/İmg/location.png" class="contact_section layout_padding">
+  <div class="container-flued contact_section layout_padding">
     <div class="container">
-      <div class="heading_container">
-        <h2>
-          Request A call back
-        </h2>
-      </div>
-      <div class="row">
-        <div class="col-md-8 mx-auto">
-          <div class="form_container">
-            <form>
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <input type="text" class="form-control" id="inputName4" placeholder="Name ">
-                </div>
-                <div class="form-group col-md-6">
-                  <input type="text" class="form-control" id="inputSubject4" placeholder="Phone">
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="form-group col">
-                  <input type="email" class="form-control" id="inputEmail4" placeholder="Email id">
-                </div>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" id="inputMessage" placeholder="Message">
-              </div>
-              <div class="d-flex justify-content-center">
-                <button type="submit" class="">Send</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
+     
+      
       <div class="contact_items">
 
         <a href="">
@@ -447,8 +221,7 @@
             <img src="../../../../assets/İmg/location.png" alt="">
           </div>
           <h6>
-            Loram Ipusum ari
-            lo elisant na
+            Parseller Mah. Cihannur Sok. No:10 Ümraniye/İstanbul
           </h6>
         </a>
         <a href="">
@@ -456,7 +229,7 @@
             <img src="../../../../assets/İmg/call.png" alt="">
           </div>
           <h6>
-            (+12 1234456789)
+            (+90 05452066565)
           </h6>
         </a>
         <a href="">
@@ -464,7 +237,7 @@
             <img src="../../../../assets/İmg/mail.png" alt="">
           </div>
           <h6>
-            demo@gmail.com
+            kaya67380@gmail.com
           </h6>
         </a>
 
@@ -482,7 +255,7 @@
             </a>
           </div>
           <div>
-            <a href="">
+            <a href="https://www.linkedin.com/in/samet-kaya-736604170/">
               <img src="../../../../assets/İmg/linkedin.png" alt="">
             </a>
           </div>
@@ -494,13 +267,13 @@
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
   <!-- end contact section -->
 
   <!-- map section -->
 
-  <section class="map_section">
+  <div class="container-flued map_section">
     <!-- map section -->
     <div class="map_container">
       <div class="map-responsive">
@@ -509,11 +282,11 @@
       </div>
     </div>
     <!-- end map section -->
-  </section>
+  </div>
 
 
   <!-- end map section -->
-
+<app-footer></app-footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
   </script>

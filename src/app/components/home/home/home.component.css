@@ -66,7 +66,7 @@
     }
 
     .contact_section .contact_items a {
-        margin: 25px;
+        margin: 25px 10px;
     }
 }
 
@@ -155,11 +155,11 @@ body {
   }
   
   .layout_padding2-top {
-    padding-top: 45px;
+    padding-top: 100px;
   }
   
   .layout_padding2-bottom {
-    padding-bottom: 45px;
+    padding-bottom: 30px;
   }
   
   .layout_padding-top {
@@ -443,13 +443,13 @@ body {
   .slider_section .slider_container .detail_container .detail-box h1 {
     font-family: "Open Sans",
    sans-serif;
-    text-transform: uppercase;
+   
     font-weight: bold;
     color: #fefdfc;
-    font-size: 3.5rem;
+    font-size: 2rem;
   }
   
-  .slider_section .slider_container .detail_container .detail-box a {
+  .slider_section .slider_container .detail_container .detail-box a ,.auth{
     display: inline-block;
     padding: 10px 45px;
     background-color: #f22324;
@@ -460,7 +460,7 @@ body {
     margin-top: 35px;
   }
   
-  .slider_section .slider_container .detail_container .detail-box a:hover {
+  .slider_section .slider_container .detail_container .detail-box a:hover,.auth:hover {
     background-color: transparent;
     color: #f22324;
   }
@@ -643,7 +643,7 @@ body {
   }
   
   .car_section .car_container .box .detail-box h5 {
-    font-weight: bold;
+    font-weight: 500;
   }
   
   .car_section .car_container .box .detail-box a {
@@ -857,88 +857,7 @@ body {
     color: #fefdfc;
   }
   
-  .blog_section .blog_container {
-    width: 90%;
-    margin: auto;
-  }
   
-  .blog_section .blog_container .date-box {
-    padding: 15px 25px;
-    color: #252525;
-    position: relative;
-    z-index: 2;
-    text-align: center;
-  }
-  
-  .blog_section .blog_container .date-box h6 {
-    margin: 0;
-  }
-  
-  .blog_section .blog_container .box {
-    margin: 45px 20px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
-            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
-  }
-  
-  .blog_section .blog_container .box .img-box {
-    width: 100%;
-  }
-  
-  .blog_section .blog_container .box .img-box img {
-    width: 100%;
-  }
-  
-  .blog_section .blog_container .box .detail-box {
-    padding: 15px;
-  }
-  
-  .blog_section .blog_container .box .detail-box h5 {
-    font-weight: bold;
-  }
-  
-  .blog_section .blog_container .box .detail-box p {
-    margin: 0;
-  }
-  
-  .blog_section .owl-carousel .owl-nav .owl-prev,
-  .blog_section .owl-carousel .owl-nav .owl-next {
-    width: 50px;
-    height: 50px;
-    background-size: 15px;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: absolute;
-    top: -115px;
-    outline: none;
-  }
-  
-   .blog_section .owl-carousel .owl-nav .owl-prev {
-    left: calc(95% - 45px);
-    background-image: url('../../../../assets/İmg/left-angle.png');
-  }
-  
-  .blog_section .owl-carousel .owl-nav .owl-prev:hover {
-    background-image: url('../../../../assets/İmg/left-angle-grey.png');
-  }
-  
-  .blog_section .owl-carousel .owl-nav .owl-next {
-    right: calc(5% - 45px);
-    background-image: url('../../../../assets/İmg/right-angle.png');
-  }
-  
-  .blog_section .owl-carousel .owl-nav .owl-next:hover {
-    background-image: url('../../../../assets/İmg/right-angle-grey.png');
-  } 
   
   .us_section .heading_container {
     -webkit-box-align: center;
@@ -1228,7 +1147,7 @@ body {
   }
   
   .contact_section .contact_items a h6 {
-    color: #fefdfc;
+    color:  #666666;
     margin: 0;
   }
   
@@ -1278,4 +1197,14 @@ body {
   .footer_section a {
     color: #fefdfc;
   }
-  /*# sourceMappingURL=style.css.map */
+  
+
+  .card:hover{
+    border: 1px solid rgb(242, 35, 36);
+    box-shadow: 0 6px 8px 0 rgba(242, 35, 36 ,0.2), 0 6px 20px 0 rgba(242, 35, 36, 0.19);
+  }
+.card{
+  transition: border .5s ease-in;
+  
+}
+

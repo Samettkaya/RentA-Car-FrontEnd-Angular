@@ -31,20 +31,30 @@ export class LoginComponent implements OnInit {
 
 
   login(){
-    if(this.loginForm.valid){
+    let isSessionActive=localStorage.getItem("token")
+    if(
+      isSessionActive=="0"||
+      isSessionActive==undefined||
+      !(isSessionActive=="1")
+    ){
+       if(this.loginForm.valid){
       let loginModel =Object.assign({},this.loginForm.value)
       this.authService.login(loginModel).subscribe(response=>{
-        this.toasterService.success(response.message,"Başarılı")
-        localStorage.setItem("token",response.data.token)
-        this.dataLoaded=true
-        this.router.navigate(['/cars']);
+        this.toasterService.success(response.message,"Başarılı");
+        localStorage.setItem("token",response.data.token);
+        this.dataLoaded=true;
+        this.authService.onRefresh();
+        this.router.navigate(['/home']);
       }
       ,responseError=>{
+        
         this.toasterService.error(responseError.error,"Hata!")
       })
     }
      else {
-      this.toasterService.error("Formunuz Eksik","Dikkat!")
+      this.toasterService.error("Lütfen tüm alanları doldurunuz","Dikkat!")
     }
+    }
+   
   }
 }

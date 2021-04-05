@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import  {HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import {FormsModule,ReactiveFormsModule} from '@angular/forms'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { JwtModule } from '@auth0/angular-jwt';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -40,9 +40,14 @@ import { CarsDashboardComponent } from './components/pages/admin-dashboard/cars-
 import { CarEditComponent } from './components/pages/admin-dashboard/cars-dashboard/car-edit/car-edit.component';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { HomeComponent } from './components/home/home/home.component';
+import { UserComponent } from './components/auth/user-profil/user-profil.component';
+import { UsereditComponent } from './components/auth/user-profil/useredit/useredit.component';
 
 
 
+export function tokenGetter() {
+  return localStorage.getItem("token");
+}
 
 
 @NgModule({
@@ -74,6 +79,9 @@ import { HomeComponent } from './components/home/home/home.component';
     BrandEditComponent,
     CarsDashboardComponent,
     HomeComponent,
+    UserComponent,
+    UsereditComponent,
+   
    
     
   
@@ -92,6 +100,11 @@ import { HomeComponent } from './components/home/home/home.component';
     NgMultiSelectDropDownModule.forRoot(),
     ToastrModule.forRoot({
       positionClass:"toast-bottom-right"
+    }),
+    JwtModule.forRoot({
+      config:{
+        tokenGetter: tokenGetter,
+      }
     }),
 
   ],
