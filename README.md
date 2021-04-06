@@ -1,4 +1,4 @@
-![HomePage](https://github.com/Samettkaya/RentA-Car-FrontEnd-Angular/blob/master/Readme-images/admin-update-car.jpg)
+![HomePage](https://github.com/Samettkaya/RentA-Car-FrontEnd-Angular/blob/master/Readme-Images/HomePage.PNG)
 # RentACarFrontEnd
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.4.
