@@ -1,4 +1,6 @@
 
+![HomePage](https://github.com/Samettkaya/RentA-Car-FrontEnd-Angular/blob/master/Readme-Images/HomePage.PNG)
+<br> 
 
 
 ![HomePage](https://github.com/Samettkaya/RentA-Car-FrontEnd-Angular/blob/master/Readme-Images/HomePage2.PNG)
