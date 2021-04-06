@@ -1,19 +1,44 @@
 <br> 
 
 ![HomePage](https://github.com/Samettkaya/RentA-Car-FrontEnd-Angular/blob/master/Readme-Images/HomePage.PNG)
+<br> 
 
 ![HomePage](https://github.com/Samettkaya/RentA-Car-FrontEnd-Angular/blob/master/Readme-Images/HomePage2.PNG)
+<br> 
+
 ![HomePage](https://github.com/Samettkaya/RentA-Car-FrontEnd-Angular/blob/master/Readme-Images/HomePage3.PNG)
+<br> 
+
 ![HomePage](https://github.com/Samettkaya/RentA-Car-FrontEnd-Angular/blob/master/Readme-Images/HomePage4.PNG)
+<br> 
+
 ![HomePage](https://github.com/Samettkaya/RentA-Car-FrontEnd-Angular/blob/master/Readme-Images/HomePage5.PNG)
+<br> 
+
 ![HomePage](https://github.com/Samettkaya/RentA-Car-FrontEnd-Angular/blob/master/Readme-Images/HomePage6.PNG)
+<br> 
+
 ![LoginPage](https://github.com/Samettkaya/RentA-Car-FrontEnd-Angular/blob/master/Readme-Images/LoginPage.PNG)
+<br> 
+
 ![Register Page](https://github.com/Samettkaya/RentA-Car-FrontEnd-Angular/blob/master/Readme-Images/RegisterPage.PNG)
+<br> 
+
 ![UserProfile](https://github.com/Samettkaya/RentA-Car-FrontEnd-Angular/blob/master/Readme-Images/UserProfile.PNG)
+<br> 
+
 ![AdminPage](https://github.com/Samettkaya/RentA-Car-FrontEnd-Angular/blob/master/Readme-Images/AdminPage.PNG)
+<br> 
+
 ![CarsPage](https://github.com/Samettkaya/RentA-Car-FrontEnd-Angular/blob/master/Readme-Images/CarsPage.PNG)
+<br> 
+
 ![CarUpdate](https://github.com/Samettkaya/RentA-Car-FrontEnd-Angular/blob/master/Readme-Images/CarUpdate.PNG)
+<br> 
+
 ![ColorPage](https://github.com/Samettkaya/RentA-Car-FrontEnd-Angular/blob/master/Readme-Images/ColorPage.PNG)
+<br> 
+
 # RentACarFrontEnd
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.4.
