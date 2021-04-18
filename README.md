@@ -1,4 +1,8 @@
 
+[![Linkedin Badge](https://img.shields.io/badge/Sametkaya-follow%20on%20linkedin-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/samet-kaya-736604170/)
+![Instagram Badge](https://img.shields.io/badge/kaya67380@gmail.com-follow%20on%20Gmail-blue?style=for-the-badge&logo=gmail)
+
+
 ![HomePage](https://github.com/Samettkaya/RentA-Car-FrontEnd-Angular/blob/master/Readme-Images/HomePage.PNG)
 <br> 
 
