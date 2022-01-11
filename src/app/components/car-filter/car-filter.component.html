@@ -7,7 +7,7 @@
     </div>
     <div class="col-md-4">
         <select [(ngModel)]="colorIdFilter" class="form-select" aria-label="Default select example">
-          
+            
             <option *ngFor="let color of colors" [value]="color.colorId" >{{color.colorName}}</option>
           </select>
     </div>
@@ -15,6 +15,6 @@
         <a routerLink="/cars/filter/{{brandIdFilter}}/{{colorIdFilter}}" class="btn btn-success">Filtrele</a>
         </div>
         <div class="col-md-2">
-            <a routerLink="/" class="btn btn-danger">Temizle</a>
+            <a routerLink="/cars" class="btn btn-danger">Temizle</a>
         </div>
 </div>

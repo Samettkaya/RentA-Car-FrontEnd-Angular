@@ -17,7 +17,7 @@ export class RentalComponent implements OnInit {
   endDate:Date;
   rentPrice:number = 0;
   rental:Rental;
-  rentable:Boolean = false;
+  rentable:Boolean = true;
   constructor(
     private rentalService:RentalService,
     private carService:CarService,
@@ -41,7 +41,7 @@ export class RentalComponent implements OnInit {
 
   addRental(rental:Rental){
 
-    if(this.rentable){
+    if(this.rentable=true){
       this.rental = this.rental;
      
       this.router.navigate(['/creditcard/', JSON.stringify(this.rental)]);
@@ -79,9 +79,16 @@ export class RentalComponent implements OnInit {
         this.toastrService.info("Bu tarihler arasında arabayı kiralayamazsınız","!")
       }
     }
+    else if(this.startDate!){
+   
+    }
+    else if(this.endDate!){
+   
+    }
     else{
       this.rentPrice = 0
       this.toastrService.info("Bu tarihler arasında arabayı kiralayamazsınız","!")
+      console.log("samet")
     }
   }
 
