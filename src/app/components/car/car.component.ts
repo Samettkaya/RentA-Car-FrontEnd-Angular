@@ -10,19 +10,13 @@ import { CarService } from 'src/app/services/car.service';
 })
 export class CarComponent implements OnInit {
 cars:Car[]=[];
-dataLoaded=false
-imageUrl="https://localhost:44388";
-carFilter="";
+dataLoaded:boolean = false;
+imageUrl:string = "https://localhost:44388";
+carFilter:string = "";
   constructor(
     private carService:CarService,
     private activatedRoute:ActivatedRoute,
-
-
-    
-    ) { 
-     
-
-    }
+  ) {}
 
   ngOnInit(): void {
     

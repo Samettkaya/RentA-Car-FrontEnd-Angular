@@ -10,8 +10,8 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class RegisterComponent implements OnInit {
   registerForm: FormGroup;
-  submitted = false;
-  dataLoaded=false;
+  submitted:boolean = false;
+  dataLoaded:boolean = false;
   constructor(
     private  formBuilder:FormBuilder,
     private authService:AuthService,

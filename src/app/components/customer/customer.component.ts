@@ -9,7 +9,7 @@ import { CustomerService } from 'src/app/services/customer.service';
 })
 export class CustomerComponent implements OnInit {
   customers:Customer[] = [];
-  dataLoaded = false;
+  dataLoaded:boolean = false;
   constructor(private customerService:CustomerService) { }
 
   ngOnInit(): void {
