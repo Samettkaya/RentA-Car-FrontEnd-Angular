@@ -9,10 +9,10 @@ import { CarService } from 'src/app/services/car.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  imageUrl="https://localhost:44388";
+  imageUrl:string = "https://localhost:44388";
   cars:Car[]=[];
   currentImage : CarImage;
-  dataLoaded=false;
+  dataLoaded:boolean = false;
   constructor(
     private carService:CarService,
   ) { }

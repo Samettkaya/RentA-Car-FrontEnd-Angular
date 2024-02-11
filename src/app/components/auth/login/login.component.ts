@@ -11,7 +11,7 @@ import { AuthService } from 'src/app/services/auth.service';
 export class LoginComponent implements OnInit {
 
   loginForm:FormGroup
-  dataLoaded=false
+  dataLoaded:boolean = false;
   constructor(
     private  formBuilder:FormBuilder,
     private authService:AuthService,

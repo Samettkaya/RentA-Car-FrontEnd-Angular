@@ -26,12 +26,6 @@ export class NaviComponent implements OnInit {
       this.authService.userDetailFromToken();
        
     } 
-    
-    
-    
-    
-   
-
   }
 
   isAuthenticated(){
